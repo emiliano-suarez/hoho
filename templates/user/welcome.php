@@ -1,0 +1,1 @@
+This is the welcome page we'll be displaying when user is finishing the sign-up process.

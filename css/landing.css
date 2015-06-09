@@ -1,0 +1,808 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+/* 
+ * Mixins // Credit to Harry Roberts & inuit.css for these simple Mixins
+ *
+ * Font size
+ */
+/*
+ * Vendor
+ */
+/*
+ * Calc
+ */
+/*
+ * Striped
+ */
+/*
+ * Clearfix
+ */
+/*
+ * Vertical align
+ */
+/*
+ * Ellipsis title
+ *
+ * Example of usage:
+ * @include ellipsis(2em, 2);
+ *
+ */
+/*
+ * Settings
+ */
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1.6875;
+  color: #6D6E71;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none; }
+
+html, body {
+  height: 100%; }
+
+canvas {
+  -ms-touch-action: double-tap-zoom; }
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6875;
+  margin: 0 0 14px; }
+
+small {
+  font-size: 65%; }
+
+a {
+  color: #939598;
+  text-decoration: none;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 2.07692; }
+  a:hover {
+    text-decoration: underline;
+    color: #414042; }
+
+hr {
+  border-top: 1px solid #949699;
+  border-bottom: none;
+  border-left: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #414042; }
+  h1 small,
+  h1 .small, h2 small,
+  h2 .small, h3 small,
+  h3 .small, h4 small,
+  h4 .small, h5 small,
+  h5 .small, h6 small,
+  h6 .small {
+    font-size: 65%;
+    display: block; }
+
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.5;
+  margin-bottom: -moz-calc(18px);
+  margin-bottom: -webkit-calc(18px);
+  margin-bottom: calc(18px); }
+
+h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.8;
+  margin-bottom: -moz-calc(15px);
+  margin-bottom: -webkit-calc(15px);
+  margin-bottom: calc(15px); }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.125;
+  margin-bottom: -moz-calc(12px);
+  margin-bottom: -webkit-calc(12px);
+  margin-bottom: calc(12px); }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: -moz-calc(9px);
+  margin-bottom: -webkit-calc(9px);
+  margin-bottom: calc(9px); }
+
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6875;
+  margin-bottom: -moz-calc(8px);
+  margin-bottom: -webkit-calc(8px);
+  margin-bottom: calc(8px); }
+
+h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2.25;
+  margin-bottom: -moz-calc(6px);
+  margin-bottom: -webkit-calc(6px);
+  margin-bottom: calc(6px); }
+
+.container {
+  width: auto;
+  max-width: 1140px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  *zoom: 1; }
+  .container:before, .container:after {
+    content: '';
+    display: table; }
+  .container:after {
+    clear: both; }
+
+/*
+input, button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  box-sizing: border-box; }
+*/
+/* Header */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 125px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s; }
+  .main-header .header-left {
+    float: left;
+    clear: none;
+    width: 58.8%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .main-header .header-left:last-child {
+      margin-right: 0%; }
+  .main-header .header-right {
+    float: left;
+    clear: none;
+    width: 38.2%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .main-header .header-right:last-child {
+      margin-right: 0%; }
+  .main-header .logo {
+    display: block;
+    margin: 30px 0 0;
+    float: left; }
+    .main-header .logo svg {
+      width: 150px;
+      height: 71px;
+      fill: #FFFFFF;
+      -moz-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      -webkit-transition: all, 0.5s;
+      transition: all, 0.5s; }
+  .main-header .menu-left {
+    margin: 73px 0 0 20px;
+    display: inline-block; }
+    .main-header .menu-left ul li {
+      display: inline-block;
+      margin: 0 20px 0 0; }
+      .main-header .menu-left ul li a {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.6875;
+        color: #FFFFFF;
+        text-decoration: none; }
+  .main-header .menu-user {
+    margin: 73px 0 0;
+    float: right; }
+    .main-header .menu-user ul li {
+      display: inline-block;
+      margin: 0 0 0 20px; }
+      .main-header .menu-user ul li a {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.6875;
+        color: #FFFFFF;
+        text-decoration: none; }
+        .main-header .menu-user ul li a.btn-menu {
+          width: 80px;
+          height: 31px;
+          border: 2px solid #b11116;
+          background-color: #b11116;
+          display: inline-block;
+          -moz-border-radius: 18px;
+          -webkit-border-radius: 18px;
+          border-radius: 18px;
+          line-height: 2;
+          text-align: center; }
+          .main-header .menu-user ul li a.btn-menu:hover {
+            background-color: transparent;
+            color: #FFFFFF; }
+  .main-header.sticky {
+    min-height: 75px;
+    background-color: #FFFFFF; }
+    .main-header.sticky .logo {
+      margin: 16px 0 0; }
+      .main-header.sticky .logo svg {
+        width: 100px;
+        height: 48px;
+        fill: #b11116; }
+    .main-header.sticky .menu-left {
+      margin: 22px 0 0 70px; }
+      .main-header.sticky .menu-left ul li a {
+        color: #414042; }
+        .main-header.sticky .menu-left ul li a.btn-menu {
+          color: #FFFFFF; }
+    .main-header.sticky .menu-user {
+      margin: 22px 0 0; }
+      .main-header.sticky .menu-user ul li a {
+        color: #414042; }
+        .main-header.sticky .menu-user ul li a.btn-menu {
+          color: #FFFFFF; }
+          .main-header.sticky .menu-user ul li a.btn-menu:hover {
+            color: #b11116;
+            background-color: #FFFFFF; }
+
+/* Intro */
+.main-intro {
+  height: 100%;
+  display: block;
+  background-image: url("../img/bkg_intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+  .main-intro .block-intro-inner {
+    margin: 360px 0 0 0;
+    display: block;
+    text-align: center; }
+    .main-intro .block-intro-inner p {
+      color: #FFFFFF;
+      margin: 0; }
+      .main-intro .block-intro-inner p:nth-child(1) {
+        font-size: 36px;
+        font-size: 2.25rem;
+        line-height: 1.5;
+        font-weight: 300;
+        font-style: italic;
+        font-family: "Merriweather", sans-serif; }
+      .main-intro .block-intro-inner p:nth-child(2) {
+        font-size: 48px;
+        font-size: 3rem;
+        line-height: 1.125;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .main-intro .block-intro-inner p:nth-child(3) {
+        font-size: 30px;
+        font-size: 1.875rem;
+        line-height: 1.8;
+        font-weight: 300;
+        font-style: italic;
+        font-family: "Merriweather", sans-serif; }
+    .main-intro .block-intro-inner .btn-intro {
+      height: 55px;
+      padding: 0 50px;
+      -moz-border-radius: 27px;
+      -webkit-border-radius: 27px;
+      border-radius: 27px;
+      display: inline-block;
+      border: 2px solid #FFFFFF;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      font-weight: 400;
+      text-align: center;
+      color: #FFFFFF;
+      text-decoration: none;
+      line-height: 2.8;
+      margin: 40px 15px 0;
+      -moz-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      -webkit-transition: all, 0.5s;
+      transition: all, 0.5s; }
+      .main-intro .block-intro-inner .btn-intro:hover {
+        background-color: #FFFFFF;
+        color: #b11116; }
+  .main-intro .block-newsletter {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 125px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 62px; }
+    .main-intro .block-newsletter .form-newsletter {
+      width: 600px;
+      display: block;
+      margin: 38px auto 0; }
+      .main-intro .block-newsletter .form-newsletter input[type="text"] {
+        width: 450px;
+        height: 50px;
+        display: inline-block;
+        float: left;
+        background-color: #FFFFFF;
+        border: none;
+        padding: 0 20px;
+        outline: none;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.6875;
+        color: #414042;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif; }
+        .main-intro .block-newsletter .form-newsletter input[type="text"]:-moz-placeholder {
+          font-size: 16px;
+          font-size: 1rem;
+          line-height: 1.6875;
+          color: #414042; }
+        .main-intro .block-newsletter .form-newsletter input[type="text"]::-moz-placeholder {
+          font-size: 16px;
+          font-size: 1rem;
+          line-height: 1.6875;
+          color: #414042; }
+        .main-intro .block-newsletter .form-newsletter input[type="text"]:-ms-input-placeholder {
+          font-size: 16px;
+          font-size: 1rem;
+          line-height: 1.6875;
+          color: #414042; }
+        .main-intro .block-newsletter .form-newsletter input[type="text"]::-webkit-input-placeholder {
+          font-size: 16px;
+          font-size: 1rem;
+          line-height: 1.6875;
+          color: #414042; }
+      .main-intro .block-newsletter .form-newsletter button {
+        width: 150px;
+        height: 50px;
+        background-color: #b11116;
+        display: inline-block;
+        float: left;
+        border: none;
+        color: #FFFFFF;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        font-weight: 400;
+        text-transform: uppercase;
+        outline: none; }
+
+/* Home Footer Menu */
+.main-home-footer-menu {
+  padding: 50px 0;
+  display: block;
+  background-color: #E6E7E8; }
+  .main-home-footer-menu .container {
+    width: auto;
+    max-width: 750px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0; }
+  .main-home-footer-menu .main-home-footer-menu-inner {
+    float: left;
+    clear: none;
+    width: 22.75%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .main-home-footer-menu .main-home-footer-menu-inner:last-child {
+      margin-right: 0%; }
+    .main-home-footer-menu .main-home-footer-menu-inner h4 {
+      text-transform: uppercase; }
+    .main-home-footer-menu .main-home-footer-menu-inner .menu-social a {
+      margin: 0 10px 0 0; }
+      .main-home-footer-menu .main-home-footer-menu-inner .menu-social a .fa {
+        font-size: 30px; }
+
+/* Footer */
+.main-footer {
+  height: 40px;
+  background-color: #D1D3D4;
+  display: block; }
+  .main-footer p {
+    text-align: center;
+    margin: 0;
+    color: #77787B;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 2.25;
+    line-height: 3.6;
+    font-weight: 400;
+    text-transform: uppercase; }
+
+/* What */
+.main-landing-what {
+  padding: 100px 0 70px;
+  display: block;
+  background-color: #f6f6f6; }
+  .main-landing-what h3 {
+    text-transform: uppercase;
+    text-align: center; }
+  .main-landing-what ul {
+    margin: 40px 0 0;
+    *zoom: 1; }
+    .main-landing-what ul:before, .main-landing-what ul:after {
+      content: '';
+      display: table; }
+    .main-landing-what ul:after {
+      clear: both; }
+    .main-landing-what ul li {
+      float: left;
+      clear: none;
+      width: 31.33333%;
+      margin-left: 0%;
+      margin-right: 3%;
+      text-align: center; }
+      .main-landing-what ul li:nth-of-type(3n) {
+        margin-right: 0%;
+        float: right; }
+      .main-landing-what ul li:nth-of-type(3n + 1) {
+        clear: both; }
+      .main-landing-what ul li .fa {
+        color: #b11116;
+        font-size: 60px;
+        margin-bottom: 40px; }
+      .main-landing-what ul li h3 {
+        font-family: "Merriweather", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 20px;
+        text-transform: inherit; }
+      .main-landing-what ul li p {
+        text-align: left; }
+        .main-landing-what ul li p a {
+          color: #b11116; }
+
+/* Landing About */
+.main-landing-about-info {
+  padding: 70px 0;
+  display: block;
+  background-color: #b11116;
+  text-align: center; }
+  .main-landing-about-info .container {
+    width: auto;
+    max-width: 550px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0; }
+  .main-landing-about-info h2 {
+    color: #FFFFFF;
+    font-family: "Merriweather", sans-serif;
+    font-weight: 300;
+    font-style: italic; }
+  .main-landing-about-info p {
+    text-align: left;
+    color: #FFFFFF; }
+  .main-landing-about-info input[type="text"] {
+    height: 55px;
+    width: 550px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+    border-radius: 27px;
+    display: inline-block;
+    border: 2px solid #FFFFFF;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    background-color: transparent;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 2.6;
+    margin: 40px 0 0;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    outline: none; }
+    .main-landing-about-info input[type="text"]:-moz-placeholder {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      line-height: 2.6;
+      text-transform: uppercase; }
+    .main-landing-about-info input[type="text"]::-moz-placeholder {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      line-height: 2.6;
+      text-transform: uppercase; }
+    .main-landing-about-info input[type="text"]:-ms-input-placeholder {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      line-height: 2.6;
+      text-transform: uppercase; }
+    .main-landing-about-info input[type="text"]::-webkit-input-placeholder {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 1.35;
+      line-height: 2.6;
+      text-transform: uppercase; }
+
+/* Carrousel Landing */
+.main-landing-carousel {
+  padding: 70px 0;
+  display: block; }
+  .main-landing-carousel.bg-alt {
+    background-color: #F6F6F6; }
+  .main-landing-carousel h3 {
+    text-align: center; }
+  .main-landing-carousel .block-carousel {
+    *zoom: 1;
+    margin: 40px 0 0; }
+    .main-landing-carousel .block-carousel:before, .main-landing-carousel .block-carousel:after {
+      content: '';
+      display: table; }
+    .main-landing-carousel .block-carousel:after {
+      clear: both; }
+    .main-landing-carousel .block-carousel .item {
+      margin: 0 15px;
+      cursor: pointer;
+      -moz-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      -webkit-transition: all, 0.5s;
+      transition: all, 0.5s;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7; }
+      .main-landing-carousel .block-carousel .item h3 {
+        font-family: "Merriweather", sans-serif;
+        font-weight: 700;
+        font-style: italic; }
+      .main-landing-carousel .block-carousel .item figure {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 30px; }
+        .main-landing-carousel .block-carousel .item figure img {
+          float: left; }
+        .main-landing-carousel .block-carousel .item figure figcaption {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          text-align: center;
+          background-color: rgba(65, 64, 66, 0.57);
+          display: none; }
+          .main-landing-carousel .block-carousel .item figure figcaption span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-size: 1.5rem;
+            line-height: 1.125;
+            color: #FFFFFF;
+            font-family: "Merriweather", sans-serif;
+            font-weight: 700;
+            font-style: italic; }
+        .main-landing-carousel .block-carousel .item figure:hover figcaption {
+          display: block; }
+      .main-landing-carousel .block-carousel .item .block-stars {
+        text-align: center;
+        display: block;
+        margin-bottom: 10px; }
+        .main-landing-carousel .block-carousel .item .block-stars .fa {
+          color: #b11116; }
+      .main-landing-carousel .block-carousel .item .icon-social {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px; }
+        .main-landing-carousel .block-carousel .item .icon-social .fa {
+          font-size: 138px; }
+      .main-landing-carousel .block-carousel .item:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1; }

@@ -1,0 +1,31 @@
+.segmentListItem {
+    margin: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius:10px;
+    display: inline;
+    float: left;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #fff;
+}
+
+.segmentListItem:hover {
+  font-weight: bold;
+  cursor:hand;
+  font-size: 14pt;
+}
+
+.segmentListItemRonly {
+    margin: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius:10px;
+    display: inline;
+    float: left;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    color: #fff;
+}
